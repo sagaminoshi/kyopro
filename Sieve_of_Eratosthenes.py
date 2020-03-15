@@ -14,7 +14,7 @@ def Sieve_of_Eratosthenes(N):
     return prime
 
 #リスト版、こっちの方が高速。
-def sieve(N):
+def Sieve_of_Eratosthenes(N):
     if N<2:
         prime = [False for i in range(N+1)]
         return prime
