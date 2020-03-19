@@ -22,3 +22,15 @@ def egcd(a, b):
 def modinv(a, m):
     (inv, q, gcd_val) = egcd(a, m)
     return inv % m
+
+#簡易版
+def inv(a,m):
+    b=m
+    (x, lastx) = (0, 1)
+    (y, lasty) = (1, 0)
+    while b != 0:
+        q = a // b
+        (a, b) = (b, a % b)
+        (x, lastx) = (lastx - q * x, x)
+        (y, lasty) = (lasty - q * y, y)
+    return lastx % m
